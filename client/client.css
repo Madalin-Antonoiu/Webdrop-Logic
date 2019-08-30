@@ -1,0 +1,48 @@
+body{
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+h3 {
+  margin: 0;
+}
+
+/*This needs to be inserted and removed via JS - via APPEND on hover*/
+.outline-dashed {
+    outline: 1px dashed gray;
+}
+
+  .outline {
+    outline: 3px solid #3299CC;
+  }
+
+  #div1 {
+    width: 550px;
+    height: 320px;
+    padding-top: 10px;
+  }
+
+
+  
+  .Column {
+    float: left;
+    width: 31%;
+    padding: 10px;
+    margin: 5px;
+    height: 300px;
+    /* Should be removed. Only for demonstration */
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
