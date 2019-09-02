@@ -77,18 +77,26 @@ function onLoadiframe() { //if not doing on iFrame load, the addEventListeners w
   }
 
   function onDragStart(e) {
+
     console.log("dragStart - Here i should carry data");
     e.dataTransfer.setData("text/plain", e.target.id);
+    e.effectAllowed = "copy";
   }
 
   function onDrop(e) {
     e.preventDefault();
-    e.stopPropagation();
+
     console.log('Drop event');
 
-    var data = e.dataTransfer.getData("text");
-    e.target.appendChild(document.getElementById(data));
-    // Clear the drag data cache (for all formats/types)
+    var id = e.dataTransfer.getData("text");
+
+    var nodeCopy = document.getElementById(id).cloneNode(true);
+    nodeCopy.id = "newId";
+    e.target.appendChild(nodeCopy);
+
+
+
+
     e.dataTransfer.clearData();
   }
 
