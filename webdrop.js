@@ -79,7 +79,9 @@ function onLoadiframe() { //if not doing on iFrame load, the addEventListeners w
   function onDragStart(e) {
 
     console.log("dragStart - Here i should carry data");
-    e.dataTransfer.setData("text/plain", e.target.id);
+     //get data attribute on click :)
+    console.log(e.target.getAttribute('data-insert-html'));
+    e.dataTransfer.setData("text/html", e.target.getAttribute('data-insert-html'));
     e.effectAllowed = "copy";
   }
 
@@ -88,16 +90,14 @@ function onLoadiframe() { //if not doing on iFrame load, the addEventListeners w
 
     console.log('Drop event');
 
-    var id = e.dataTransfer.getData("text");
+   
+    var x =  e.dataTransfer.getData("text/html", e.target.getAttribute('data-insert-html'));
+    console.log(x);
+    var frag = document.createRange().createContextualFragment(x);
+    console.log(frag);
+    e.target.appendChild(frag);
 
-    var nodeCopy = document.getElementById(id).cloneNode(true);
-    nodeCopy.id = "newId";
-    e.target.appendChild(nodeCopy);
-
-
-
-
-    e.dataTransfer.clearData();
+  
   }
 
 }
