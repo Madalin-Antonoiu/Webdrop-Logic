@@ -459,9 +459,60 @@
 
             
             <!--Buttons--> 
-            <button class="collapsible">Cards</button>
+            <button class="collapsible">Containers/Rows/Columns</button>
             <div class="content">
-              
+
+                <!--Empty Container-->
+                <li draggable="true" data-insert-html=
+                '
+                <div class="container">
+                  Delete me 
+                  </div>
+                '>
+                  <p><i class="fa fa-header"></i>Empty Container</p>
+                </li>
+
+                <!--Empty Row-->
+                <li draggable="true" data-insert-html=
+                '
+                <div class="row">
+                  Empty row 
+                </div>
+                '>
+                  <p><i class="fa fa-header"></i>Empty Row</p>
+                </li>
+
+                <!--Empty Column-->
+                <li draggable="true" data-insert-html=
+                '
+                <div class="col">
+                    Empty column
+                  </div>
+                '>
+                  <p><i class="fa fa-header"></i>Empty column</p>
+                </li>
+                
+                <!--1 Row 3 columns-->
+                <li draggable="true" data-insert-html=
+                '
+                <div class="row">
+                    <div class="col">
+                      1 of 3
+                    </div>
+                    <div class="col">
+                      2 of 3
+                    </div>
+                    <div class="col">
+                      3 of 3
+                    </div>
+                  </div>
+                '>
+                  <p><i class="fa fa-header"></i>1 Row 3 Columns</p>
+                </li>
+
+
+
+
             </div>
 
           <li data-insert-html=
@@ -508,7 +559,7 @@
               </div>
             </div>
           '>
-            <p><i class="fa fa-header"></i>Three Columns</p>
+            <p><i class="fa fa-header"></i>Container with 1 Row/ 3 Columns</p>
           </li>
 
           <!--Breadcrumb-->  
@@ -616,18 +667,51 @@
             <p><i class="fa fa-header"></i>Card grid - 3 columns no img</p>
           </li>
 
+           <!--Container-->
           <li draggable="true" data-insert-html=
           '
-
+          <div class="container">
+              <div class="row">
+                <div class="col">
+                  1 of 2
+                </div>
+                <div class="col">
+                  2 of 2
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  1 of 3
+                </div>
+                <div class="col">
+                  2 of 3
+                </div>
+                <div class="col">
+                  3 of 3
+                </div>
+              </div>
+            </div>
           '>
-            <p><i class="fa fa-header"></i>Empty</p>
+            <p><i class="fa fa-header"></i>Container 2/2 si 3/3</p>
           </li>
           
           <li draggable="true" data-insert-html=
           '
-
+          <div class="container">
+            <div class="row">
+              <div class="col">
+                1 of 3
+              </div>
+              <div class="col">
+                2 of 3
+              </div>
+              <div class="col">
+                3 of 3
+              </div>
+            </div>
+          </div>
           '>
-            <p><i class="fa fa-header"></i>Empty</p>
+            <p><i class="fa fa-header"></i> Container - 1 Row 3 columns</p>
           </li>
           
           <li draggable="true" data-insert-html=
