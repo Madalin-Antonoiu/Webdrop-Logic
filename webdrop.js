@@ -82,10 +82,10 @@ function onLoadiframe() { //if not doing on iFrame load, the addEventListeners w
     console.log("Drag Started!");
     e.dataTransfer.setData("text/html", e.target.getAttribute('data-insert-html'));
 
-    //Drag image
+    /*Drag image
     var img = new Image(); 
-    img.src = 'example.gif'; 
-
+    img.src = './img/alerts.jpg'
+      */
     //get data attribute on click :)
     //console.log(e.target.getAttribute('data-insert-html'));
 
