@@ -42,12 +42,13 @@
           <p><i class="fa fa-bar-chart"></i>Chart Image</p>
           </li>
 
-          <li id="takeme3" draggable="true"
+          <li draggable="true"
             data-insert-html='
             <div class="well login-box"> <form action=""> <legend>Login</legend> <div class="form-group"> <label for="username-email">E-mail or Username</label> <input value="" id="username-email" placeholder="E-mail or Username" type="text" class="form-control"/> </div><div class="form-group"> <label for="password">Password</label> <input id="password" value="" placeholder="Password" type="text" class="form-control"/> </div><div class="form-group text-center"> <button class="btn btn-danger btn-cancel-action">Cancel</button> <input type="submit" class="btn btn-success btn-login-submit" value="Login"/> </div></form> </div>
             '>
             <p><i class="fa fa-sign-in"></i>Login Form</p>
           </li>
+
           <li draggable="true"
             data-insert-html='
             <div class="topnav" id="myTopnav"> <a href="#home" class="active">Home</a> <a href="#news">News</a> <a href="#contact">Contact</a> <a href="#about">About</a> <a href="javascript:void(0);" class="icon" onclick="myFunction()"> + </a> </div>
@@ -55,6 +56,7 @@
             <p><i class="fa fa-bar-chart"></i>Responsive Nav</p>
           </li>
 
+           <!--Three Columns Col-Sm-->  
           <li draggable="true" data-insert-html='
           <div class="container">
               <div class="row">
@@ -73,14 +75,445 @@
             <p><i class="fa fa-header"></i>Three Columns</p>
           </li>
 
-          
-          <li draggable="true" data-insert-html=' '>
+          <!--Alerts-->
+          <li draggable="true" data-insert-html='
+          <div class="alert alert-primary" role="alert">
+              A simple primary alert—check it out!
+            </div>
+            <div class="alert alert-secondary" role="alert">
+              A simple secondary alert—check it out!
+            </div>
+            <div class="alert alert-success" role="alert">
+              A simple success alert—check it out!
+            </div>
+            <div class="alert alert-danger" role="alert">
+              A simple danger alert—check it out!
+            </div>
+            <div class="alert alert-warning" role="alert">
+              A simple warning alert—check it out!
+            </div>
+            <div class="alert alert-info" role="alert">
+              A simple info alert—check it out!
+            </div>
+            <div class="alert alert-light" role="alert">
+              A simple light alert—check it out!
+            </div>
+            <div class="alert alert-dark" role="alert">
+              A simple dark alert—check it out!
+            </div>
+          '>
+            <p><i class="fa fa-header"></i>Alerts</p>
+          </li>
+
+          <!--Alert dissmisible-->
+          <li draggable="true" data-insert-html=
+          '
+          <div class="alert alert-warning alert-dismissible fade show" role="alert">
+              <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+          '>
+            <p><i class="fa fa-header"></i>Alert dismissable</p>
+          </li>
+
+          <!--Alert with heading-->
+          <li draggable="true" data-insert-html=
+          '
+          <div class="alert alert-success" role="alert">
+              <h4 class="alert-heading">Well done!</h4>
+              <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
+              <hr>
+              <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+            </div>
+          '>
+            <p><i class="fa fa-header"></i>Alert with heading</p>
+          </li>
+
+          <!--Link colors-->
+          <li draggable="true" data-insert-html=
+          '
+          <div class="alert alert-primary" role="alert">
+              A simple primary alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+            </div>
+            <div class="alert alert-secondary" role="alert">
+              A simple secondary alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+            </div>
+            <div class="alert alert-success" role="alert">
+              A simple success alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+            </div>
+            <div class="alert alert-danger" role="alert">
+              A simple danger alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+            </div>
+            <div class="alert alert-warning" role="alert">
+              A simple warning alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+            </div>
+            <div class="alert alert-info" role="alert">
+              A simple info alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+            </div>
+            <div class="alert alert-light" role="alert">
+              A simple light alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+            </div>
+            <div class="alert alert-dark" role="alert">
+              A simple dark alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+            </div>
+          '>
+            <p><i class="fa fa-header"></i>Link colors</p>
+          </li>
+
+          <!--Badges -->
+          <li draggable="true" data-insert-html=
+          '
+          <h1>Example heading <span class="badge badge-secondary">New</span></h1>
+          <h2>Example heading <span class="badge badge-secondary">New</span></h2>
+          <h3>Example heading <span class="badge badge-secondary">New</span></h3>
+          <h4>Example heading <span class="badge badge-secondary">New</span></h4>
+          <h5>Example heading <span class="badge badge-secondary">New</span></h5>
+          <h6>Example heading <span class="badge badge-secondary">New</span></h6>
+          '>
+            <p><i class="fa fa-header"></i>Badges</p>
+          </li>
+
+          <!--Badge - Button Notification -->
+          <li draggable="true" data-insert-html=
+          '
+          <button type="button" class="btn btn-primary">
+          Notifications <span class="badge badge-light">4</span>
+          </button>
+          <button type="button" class="btn btn-primary">
+              Profile <span class="badge badge-light">9</span>
+              <span class="sr-only">unread messages</span>
+          </button>     
+          <button type="button" class="btn btn-primary">
+              Profile <span class="badge badge-secondary">9</span>
+              <span class="sr-only">unread messages</span>
+          </button>          <button type="button" class="btn btn-primary">
+              Profile <span class="badge badge-success">9</span>
+              <span class="sr-only">unread messages</span>
+          </button>          <button type="button" class="btn btn-primary">
+              Profile <span class="badge badge-danger">9</span>
+              <span class="sr-only">unread messages</span>
+          </button>
+          '>
+            <p><i class="fa fa-header"></i>Badge Button Notification</p>
+          </li>
+
+          <!--Badges - Contextual variations-->
+          <li draggable="true" data-insert-html=
+          '
+          <span class="badge badge-primary">Primary</span>
+          <span class="badge badge-secondary">Secondary</span>
+          <span class="badge badge-success">Success</span>
+          <span class="badge badge-danger">Danger</span>
+          <span class="badge badge-warning">Warning</span>
+          <span class="badge badge-info">Info</span>
+          <span class="badge badge-light">Light</span>
+          <span class="badge badge-dark">Dark</span>
+          '>
+            <p><i class="fa fa-header"></i>Badges - Contextual</p>
+          </li>
+
+          <!--Badges - Pills -->
+          <li draggable="true" data-insert-html=
+          '
+          <span class="badge badge-pill badge-primary">Primary</span>
+          <span class="badge badge-pill badge-secondary">Secondary</span>
+          <span class="badge badge-pill badge-success">Success</span>
+          <span class="badge badge-pill badge-danger">Danger</span>
+          <span class="badge badge-pill badge-warning">Warning</span>
+          <span class="badge badge-pill badge-info">Info</span>
+          <span class="badge badge-pill badge-light">Light</span>
+          <span class="badge badge-pill badge-dark">Dark</span>
+          '>
+            <p><i class="fa fa-header"></i>Pill badges</p>
+          </li>
+
+          <!--Badges - Links -->  
+          <li draggable="true" data-insert-html=
+          '
+          <a href="#" class="badge badge-primary">Primary</a>
+          <a href="#" class="badge badge-secondary">Secondary</a>
+          <a href="#" class="badge badge-success">Success</a>
+          <a href="#" class="badge badge-danger">Danger</a>
+          <a href="#" class="badge badge-warning">Warning</a>
+          <a href="#" class="badge badge-info">Info</a>
+          <a href="#" class="badge badge-light">Light</a>
+          <a href="#" class="badge badge-dark">Dark</a>
+          '>
+            <p><i class="fa fa-header"></i>Badges - Links</p>
+          </li>
+
+          <!--Breadcrumb-->  
+          <li draggable="true" data-insert-html=
+          '
+          <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item active" aria-current="page">Home</li>
+              </ol>
+            </nav>
+            
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Library</li>
+              </ol>
+            </nav>
+            
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item"><a href="#">Library</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Data</li>
+              </ol>
+            </nav>
+          '>
+            <p><i class="fa fa-header"></i>Breadcrumb</p>
+          </li>
+
+          <li draggable="true" data-insert-html=
+          '
+
+          '>
             <p><i class="fa fa-header"></i>Empty</p>
           </li>
 
+          <li draggable="true" data-insert-html=
+          '
 
+          '>
+            <p><i class="fa fa-header"></i>Empty</p>
+          </li>
+          
+          <li draggable="true" data-insert-html=
+          '
+
+          '>
+            <p><i class="fa fa-header"></i>Empty</p>
+          </li>
+          
+          <li draggable="true" data-insert-html=
+          '
+
+          '>
+            <p><i class="fa fa-header"></i>Empty</p>
+          </li>
+          
+          <li draggable="true" data-insert-html=
+          '
+
+          '>
+            <p><i class="fa fa-header"></i>Empty</p>
+          </li>
+          
+          <li draggable="true" data-insert-html=
+          '
+
+          '>
+            <p><i class="fa fa-header"></i>Empty</p>
+          </li>
+          
+          <li draggable="true" data-insert-html=
+          '
+
+          '>
+            <p><i class="fa fa-header"></i>Empty</p>
+          </li>
+          
+          <li draggable="true" data-insert-html=
+          '
+
+          '>
+            <p><i class="fa fa-header"></i>Empty</p>
+          </li>
+          
+          <li draggable="true" data-insert-html=
+          '
+
+          '>
+            <p><i class="fa fa-header"></i>Empty</p>
+          </li>
+          
+          <li draggable="true" data-insert-html=
+          '
+
+          '>
+            <p><i class="fa fa-header"></i>Empty</p>
+          </li>
+          
+          <li draggable="true" data-insert-html=
+          '
+
+          '>
+            <p><i class="fa fa-header"></i>Empty</p>
+          </li>
+          
+          <li draggable="true" data-insert-html=
+          '
+
+          '>
+            <p><i class="fa fa-header"></i>Empty</p>
+          </li>
+          
+          <li draggable="true" data-insert-html=
+          '
+
+          '>
+            <p><i class="fa fa-header"></i>Empty</p>
+          </li>
+          
+          <li draggable="true" data-insert-html=
+          '
+
+          '>
+            <p><i class="fa fa-header"></i>Empty</p>
+          </li>
+          
+          <li draggable="true" data-insert-html=
+          '
+
+          '>
+            <p><i class="fa fa-header"></i>Empty</p>
+          </li>
+          
+          <li draggable="true" data-insert-html=
+          '
+
+          '>
+            <p><i class="fa fa-header"></i>Empty</p>
+          </li>
+          
+          <li draggable="true" data-insert-html=
+          '
+
+          '>
+            <p><i class="fa fa-header"></i>Empty</p>
+          </li>
+          
+          <li draggable="true" data-insert-html=
+          '
+
+          '>
+            <p><i class="fa fa-header"></i>Empty</p>
+          </li>
+          
+          <li draggable="true" data-insert-html=
+          '
+
+          '>
+            <p><i class="fa fa-header"></i>Empty</p>
+          </li>
+          
+          <li draggable="true" data-insert-html=
+          '
+
+          '>
+            <p><i class="fa fa-header"></i>Empty</p>
+          </li>
+          
+          <li draggable="true" data-insert-html=
+          '
+
+          '>
+            <p><i class="fa fa-header"></i>Empty</p>
+          </li>
+          
+          <li draggable="true" data-insert-html=
+          '
+
+          '>
+            <p><i class="fa fa-header"></i>Empty</p>
+          </li>
+          
+          <li draggable="true" data-insert-html=
+          '
+
+          '>
+            <p><i class="fa fa-header"></i>Empty</p>
+          </li>
+          
+          <li draggable="true" data-insert-html=
+          '
+
+          '>
+            <p><i class="fa fa-header"></i>Empty</p>
+          </li>
+          
+          <li draggable="true" data-insert-html=
+          '
+
+          '>
+            <p><i class="fa fa-header"></i>Empty</p>
+          </li>
+          
+          <li draggable="true" data-insert-html=
+          '
+
+          '>
+            <p><i class="fa fa-header"></i>Empty</p>
+          </li>
+          
+          <li draggable="true" data-insert-html=
+          '
+
+          '>
+            <p><i class="fa fa-header"></i>Empty</p>
+          </li>
+          
+          <li draggable="true" data-insert-html=
+          '
+
+          '>
+            <p><i class="fa fa-header"></i>Empty</p>
+          </li>
+          
+          <li draggable="true" data-insert-html=
+          '
+
+          '>
+            <p><i class="fa fa-header"></i>Empty</p>
+          </li>
+          
+          <li draggable="true" data-insert-html=
+          '
+
+          '>
+            <p><i class="fa fa-header"></i>Empty</p>
+          </li>
+          
+          <li draggable="true" data-insert-html=
+          '
+
+          '>
+            <p><i class="fa fa-header"></i>Empty</p>
+          </li>
+          
+          <li draggable="true" data-insert-html=
+          '
+
+          '>
+            <p><i class="fa fa-header"></i>Empty</p>
+          </li>
+          
+          <li draggable="true" data-insert-html=
+          '
+
+          '>
+            <p><i class="fa fa-header"></i>Empty</p>
+          </li>
+          
+          <li draggable="true" data-insert-html=
+          '
+
+          '>
+            <p><i class="fa fa-header"></i>Empty</p>
+          </li>
+                    
           <!-- Proper way of importing the html-->
-          <li draggable="true" data-insert-html=' '>
+          <li draggable="true" data-insert-html=
+          '
+
+          '>
             <p><i class="fa fa-header"></i>Empty</p>
           </li>
 
@@ -106,7 +539,6 @@
         <h1>Control Panel</h1>
         <button onclick=" gibMiData()">Download HTML</button>
         <button onclick='toggleEditIframe()'>Toggle Edit iFrame</button>
-        <button onclick='toggleEditDocument()'>Toggle Edit Document</button>
         <button onclick='toggleOutlineAll()'>Outline</button>
       </article>
 
@@ -114,10 +546,7 @@
       <div class="tooltip" id="tooltip1">
         PROFILE DETAILS
       </div>
-
       <div id="snackbar">Some text some message..</div>
-
-
 
     </section>
   </div>

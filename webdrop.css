@@ -30,6 +30,7 @@ body {
 	z-index: 0;
 	list-style: none;
 	background: #111;
+	overflow: auto;
 }
 .navigation ul {
 	padding: 0;
@@ -121,6 +122,9 @@ section article#right_panel {
 @media (max-width: 1200px) {
 	section article#right_panel {
 		display: none;
+	}
+	section article#iFrame_panel {
+		width: 100%;
 	}
 }
 

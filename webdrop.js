@@ -82,6 +82,10 @@ function onLoadiframe() { //if not doing on iFrame load, the addEventListeners w
     console.log("Drag Started!");
     e.dataTransfer.setData("text/html", e.target.getAttribute('data-insert-html'));
 
+    //Drag image
+    var img = new Image(); 
+    img.src = 'example.gif'; 
+
     //get data attribute on click :)
     //console.log(e.target.getAttribute('data-insert-html'));
 
@@ -125,35 +129,6 @@ function toggleEditIframe() {
 
     //Snackbar notification
     document.getElementById("snackbar").innerHTML = "IFrame Edit : ON";
-    var x = document.getElementById("snackbar")
-    x.className = "show";
-    setTimeout(function () {
-      x.className = x.className.replace("show", "");
-    }, 2000);
-
-  }
-
-}
-
-function toggleEditDocument() {
-
-  if (document.body.contentEditable == "true") {
-
-    document.body.contentEditable = false;
-
-    //Snackbar notification
-    document.getElementById("snackbar").innerHTML = "Document Body Edit : OFF";
-    var x = document.getElementById("snackbar")
-    x.className = "show";
-    setTimeout(function () {
-      x.className = x.className.replace("show", "");
-    }, 2000);
-
-  } else {
-    document.body.contentEditable = true;
-
-    //Snackbar notification
-    document.getElementById("snackbar").innerHTML = "Document Body Edit : ON";
     var x = document.getElementById("snackbar")
     x.className = "show";
     setTimeout(function () {
