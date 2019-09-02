@@ -65,8 +65,8 @@ body {
 
 /*This one positions the burger */
 label[for="nav-control"] { 
-	position: fixed;
-	right: 225px;
+	position: absolute;
+	right: 25px;
 	top: 15px;
 	z-index: 2;
 	text-rendering: auto;
@@ -101,16 +101,15 @@ section {
 }
 
 section article#iFrame_panel {
-	width: 82%;
+	width: 85%;
 	height: 100%;
-	
 	float: left;
 	position: relative;
 	text-align: center;
 }
 
 section article#right_panel {
-	width: 18%;
+	width: 15%;
 	height: 100%;
 	
 	float: left;
@@ -118,12 +117,25 @@ section article#right_panel {
 	text-align: center;
 }
 
+/*Toggle Button and MediaQuery */
+@media (max-width: 1200px) {
+	section article#right_panel {
+		display: none;
+	}
+}
+
+
+/* partea stanga 
 section article:nth-child(1) {
 	background: #f2b635;
 }
+*/
+
+/*partea dreapta*/
 section article:nth-child(2) {
-	background: black;
+	background:  #262626;
 }
+
 iframe {
 	width: 100%;
 	height: 100vh;

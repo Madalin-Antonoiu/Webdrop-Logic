@@ -3,6 +3,7 @@
 var clientFrameWindow = document.getElementById('clientframe').contentWindow.document;
 var droppables = document.getElementById("dragitemslistcontainer");
 
+
 function onLoadiframe() { //if not doing on iFrame load, the addEventListeners will crash sometimes
 
   //Listeners
@@ -78,11 +79,12 @@ function onLoadiframe() { //if not doing on iFrame load, the addEventListeners w
 
   function onDragStart(e) {
 
-    console.log("dragStart - Here i should carry data");
-     //get data attribute on click :)
-    console.log(e.target.getAttribute('data-insert-html'));
+    console.log("Drag Started!");
     e.dataTransfer.setData("text/html", e.target.getAttribute('data-insert-html'));
-    e.effectAllowed = "copy";
+
+    //get data attribute on click :)
+    //console.log(e.target.getAttribute('data-insert-html'));
+
   }
 
   function onDrop(e) {
@@ -90,20 +92,17 @@ function onLoadiframe() { //if not doing on iFrame load, the addEventListeners w
 
     console.log('Drop event');
 
-   
     var x =  e.dataTransfer.getData("text/html", e.target.getAttribute('data-insert-html'));
-    console.log(x);
     var frag = document.createRange().createContextualFragment(x);
-    console.log(frag);
+
+    //Here before appending, need to calculate if mosue is closer to top or bottom, so it prepend( put before) or after,
+    //Now it only puts it after :)
     e.target.appendChild(frag);
 
-  
+      //console.log( x  + 'The data carried over'); console.log(frag);
   }
 
 }
-
-
-
 
 
 //Control Panel
@@ -169,10 +168,13 @@ function toggleOutlineAll() {
   //Toggle iFrame outline dashed elements
   var x = clientFrameWindow.body.querySelectorAll('*');
   var i;
+
   for (i = 0; i < x.length; i++) {
-    x[i].classList.toggle("outline-dashed")
+    x[i].classList.toggle("outline-dashed");
   }
 
+  //Known bug _ adding new elements with outline on will not remove it when turning off.
+ 
   //Snackbar notifications toggle
   if (clientFrameWindow.body.classList.contains("outline-dashed")) {
     //Snackbar notification ON
@@ -206,62 +208,9 @@ function showClickedElIdClass(e) {
 }
 
 
-/*By others - needs edit */
-function allowDrop(ev) {
-  ev.preventDefault();
-}
-
-function drag(ev) {
-  ev.dataTransfer.setData("text", ev.target.id);
-}
-
-function drop(ev) {
-  ev.preventDefault();
-  var data = ev.dataTransfer.getData("text");
-  ev.target.appendChild(document.getElementById(data));
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*Full iFrame code to console- works
-
-  function copyHtml() {
-    var myHTML = document.getElementById("clientframe").contentWindow.document.documentElement.outerHTML;
-    console.log(myHTML);
-  }
-*/
-
-
 //Create download file with iFrame HTML Code (gibMiData())
 var storyPath = window.location.href;
-// Console API to clear console before logging new data
-console.API;
+console.API; // Clear console before logging new data
 if (typeof console._commandLineAPI !== 'undefined') {
   console.API = console._commandLineAPI; //chrome
 } else if (typeof console._inspectorCommandLineAPI !== 'undefined') {
@@ -269,7 +218,6 @@ if (typeof console._commandLineAPI !== 'undefined') {
 } else if (typeof console.clear !== 'undefined') {
   console.API = console;
 }
-
 // Extracts high level details of current story
 function gibMiData() {
 
@@ -279,7 +227,6 @@ function gibMiData() {
   console.save(storyObj);
 
 }
-
 console.save = function (data, filename) {
   if (!data) {
     console.error('Console.save: No data')
@@ -304,3 +251,12 @@ console.save = function (data, filename) {
   e.initMouseEvent('click', true, false, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null)
   a.dispatchEvent(e)
 }
+
+
+/*Full iFrame code to console- works
+
+  function copyHtml() {
+    var myHTML = document.getElementById("clientframe").contentWindow.document.documentElement.outerHTML;
+    console.log(myHTML);
+  }
+*/
