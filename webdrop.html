@@ -6,7 +6,9 @@
   <title>Webdrop</title>
   <link href="./webdrop.css" rel="stylesheet">
 
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="  https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css
+">
+
 
 </head>
 
@@ -35,14 +37,22 @@
     <div id="left_menu">
       <ul>
         <li>
-          <p class="big_ger"><i class="fa fa-cube" aria-hidden="true"></i><span>Elements</span></p>
+          <p class="big_ger"><i class="fas fa-th"></i></i><span>Layout</span></p>
         </li>
         <li>
-          <p class="big_ger"><i class="fa fa-cubes" aria-hidden="true"></i><span>Components</span></p>
+          <p class="big_ger"><i class="fas fa-th-large"></i></i><span>Elements</span></p>
+        </li>
+
+        <li>
+          <p class="big_ger"><i class="fas fa-cubes"></i></i><span>Components</span></p>
         </li>
         <li>
-          <p class="big_ger"><i class="fa fa-window-restore" aria-hidden="true"></i><span>Templates</span></p>
+          <p class="big_ger"><i class="fas fa-cube"></i></i><span>Blocks</span></p>
         </li>
+        <li>
+          <p class="big_ger"><i class="fas fa-window-restore" aria-hidden="true"></i><span>Templates</span></p>
+        </li>
+
       </ul>
 
 
@@ -72,9 +82,9 @@
       <!--Right Pannel -->
       <article id="right_panel">
         <h1>Control Panel</h1>
-        <button onclick=" gibMiData()">Download HTML</button>
-        <button onclick='toggleEditIframe()'>Toggle Edit iFrame</button>
-        <button onclick='toggleOutlineAll()'>Outline</button>
+        <button class="meButton" onclick=" gibMiData()"><i class="fas fa-download"></i>HTML/CSS</button>
+        <button class="meButton" onclick='toggleEditIframe()'><i class="fas fa-edit"></i>iFrame</button>
+        <button class="meButton" onclick='toggleOutlineAll()'>Outline</button>
       </article>
 
 

@@ -118,6 +118,24 @@ label[for="nav-control"] {
 	left: 195px;
 }
 
+.meButton {
+	background-color: Crimson;
+	border-radius: 5px;
+	color: white;
+	text-decoration: none;
+	border: none;
+}
+
+.meButton:focus,
+.meButton:hover {
+	background-color: FireBrick;
+	color: White;
+}
+
+
+
+
+
 .big_ger {
 
 	margin-left: 3;
