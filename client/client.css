@@ -1,10 +1,10 @@
-body{
+body {
   margin: 0;
   padding: 0;
   height: 100vh;
   width: 100%;
   background: #d9d9d9 !important;
- 
+
 }
 
 * {
@@ -12,11 +12,11 @@ body{
 }
 
 img {
-	width: 100%;
-	height: auto;
-	background-repeat: no-repeat;
-	background-size: cover;
-  }
+  width: 100%;
+  height: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 
 
@@ -27,8 +27,6 @@ img {
 }
 
 .outline {
-  outline: 4px solid #499371;
+  outline: 4px solid orange;
   outline-offset: -3px;
 }
-
-
