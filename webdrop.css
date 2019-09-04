@@ -8,20 +8,24 @@ body {
 	background: white;
 	font-family: Arial, sans-serif;
 }
+
 html {
 	box-sizing: border-box;
 }
+
 body {
 	overflow-x: hidden;
 }
+
 *,
 *:before,
 *:after {
 	box-sizing: inherit;
 }
+
 .navigation {
 	width: 100%;
-	height: 100%;
+	height: 100vh;
 	position: fixed;
 	top: 0;
 	right: 0;
@@ -30,18 +34,17 @@ body {
 	z-index: 0;
 	list-style: none;
 	background: #111;
-	
+
 }
 
-#dragitemslist{
-	overflow-y: visible;
-}
+
 
 
 .navigation ul {
 	padding: 0;
 	margin: 0;
 }
+
 .navigation ul li a {
 	display: block;
 	padding: 19px;
@@ -50,9 +53,11 @@ body {
 	text-decoration: none;
 	transition: color 0.2s, background 0.5s;
 }
+
 .navigation ul li a:hover {
 	background: rgba(255, 255, 255, 0.1);
 }
+
 .site-wrap {
 	height: 100%;
 	width: 100%;
@@ -64,6 +69,7 @@ body {
 	padding: 0;
 	background: #ffffff;
 }
+
 .nav-control {
 	position: absolute;
 	width: 100%;
@@ -71,9 +77,9 @@ body {
 }
 
 /*This one positions the burger */
-label[for="nav-control"] { 
+label[for="nav-control"] {
 	position: absolute;
-	right: 25px;
+	left: 25px;
 	top: 15px;
 	z-index: 2;
 	text-rendering: auto;
@@ -81,14 +87,20 @@ label[for="nav-control"] {
 	cursor: pointer;
 	background-size: contain;
 }
-.nav-control + label,
+
+/*With left: 60px for example, i get same effect as AdminLTE left bar!*/
+.nav-control+label,
 .site-wrap {
 	transition: left 0.2s;
+	left: 50px;
 }
-.nav-control:checked + label {
-	left: 215px;
+
+/* Unde apare X*/
+.nav-control:checked+label {
+	left: 205px;
 }
-.nav-control:checked ~ .navigation ul li {
+
+.nav-control:checked~.navigation ul li {
 	opacity: 1;
 	-webkit-transform: translateX(0);
 	-moz-transform: translateX(0);
@@ -96,7 +108,9 @@ label[for="nav-control"] {
 	-o-transform: translateX(0);
 	transform: translateX(0);
 }
-.nav-control:checked ~ .site-wrap {
+
+/*Cat de larga este fereastra stanga deschisa*/
+.nav-control:checked~.site-wrap {
 	left: 17vw;
 	box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5);
 }
@@ -118,7 +132,7 @@ section article#iFrame_panel {
 section article#right_panel {
 	width: 15%;
 	height: 100%;
-	
+
 	float: left;
 	position: relative;
 	text-align: center;
@@ -129,6 +143,7 @@ section article#right_panel {
 	section article#right_panel {
 		display: none;
 	}
+
 	section article#iFrame_panel {
 		width: 100%;
 	}
@@ -143,7 +158,7 @@ section article:nth-child(1) {
 
 /*partea dreapta*/
 section article:nth-child(2) {
-	background:  #262626;
+	background: #262626;
 }
 
 iframe {
@@ -154,6 +169,7 @@ iframe {
 
 /*Toggle Button and MediaQuery */
 @media screen and (max-width: 979px) {
+
 	section article,
 	section article:hover,
 	section:hover article {
@@ -163,11 +179,13 @@ iframe {
 		opacity: 1;
 	}
 }
+
 .toggle-button {
 	display: block;
 	width: 20px;
 	position: relative;
 }
+
 .toggle-button .wolverine {
 	display: inline-block;
 	padding: 15px 0px;
@@ -179,12 +197,14 @@ iframe {
 	-o-transition: all 0.3s ease;
 	transition: all 0.3s ease;
 }
+
 .toggle-button .wolverine .claws {
 	position: relative;
 	width: 20px;
 	height: 4px;
 	background: white;
 }
+
 .toggle-button .wolverine .claws:before,
 .toggle-button .wolverine .claws:after {
 	display: block;
@@ -197,32 +217,36 @@ iframe {
 	-webkit-transform-origin: 50% 50%;
 	transform-origin: 50% 50%;
 	-webkit-transition: top 0.1s 0.2s, -webkit-transform 0.2s ease;
-    -webkit-transition-delay: ease, 0s;
-    transition-delay: 0s, ease;
+	-webkit-transition-delay: ease, 0s;
+	transition-delay: 0s, ease;
 	-moz-transition: top 0.1s 0.2s ease, -moz-transform 0.2s ease;
 	-o-transition: top 0.1s 0.2s ease, -o-transform 0.2s ease;
 	transition: top 0.1s 0.2s ease, transform 0.2s ease;
 }
+
 .toggle-button .wolverine .claws:before {
 	top: 8px;
 }
+
 .toggle-button .wolverine .claws:after {
 	top: -8px;
 }
+
 .toggle-button .wolverine.close .claws {
-    -webkit-transition: background 0.1s 0s;
-    transition-delay: ease;
+	-webkit-transition: background 0.1s 0s;
+	transition-delay: ease;
 	-webkit-transition-delay: ease;
 	-moz-transition: background 0.1s 0s ease;
 	-o-transition: background 0.1s 0s ease;
 	transition: background 0.1s 0s ease;
 	background: transparent !important;
 }
+
 .toggle-button .wolverine.close .claws:before,
 .toggle-button .wolverine.close .claws:after {
 	background: white;
-    -webkit-transition: top 0.1s ease, -webkit-transform 0.1s 0.2s;
-    transition-delay: 0s, ease;
+	-webkit-transition: top 0.1s ease, -webkit-transform 0.1s 0.2s;
+	transition-delay: 0s, ease;
 	-webkit-transition-delay: 0s, ease;
 	-moz-transition: top 0.1s ease, -moz-transform 0.1s 0.2s ease;
 	-o-transition: top 0.1s ease, -o-transform 0.1s 0.2s ease;
@@ -230,28 +254,32 @@ iframe {
 	top: 0;
 	width: 20px;
 }
+
 .toggle-button .wolverine.close .claws:before {
 	-webkit-transform: rotate3d(0, 0, 1, 45deg);
 	transform: rotate3d(0, 0, 1, 45deg);
 }
+
 .toggle-button .wolverine.close .claws:after {
 	-webkit-transform: rotate3d(0, 0, 1, -45deg);
 	transform: rotate3d(0, 0, 1, -45deg);
 }
-.nav-control:checked ~ .toggle-button .wolverine .claws {
-    -webkit-transition: background 0.1s 0s;
-    transition-delay: 0.1s 0s ease;
+
+.nav-control:checked~.toggle-button .wolverine .claws {
+	-webkit-transition: background 0.1s 0s;
+	transition-delay: 0.1s 0s ease;
 	-webkit-transition-delay: ease;
 	-moz-transition: background 0.1s 0s ease;
 	-o-transition: background 0.1s 0s ease;
 	transition: background 0.1s 0s ease;
 	background: transparent !important;
 }
-.nav-control:checked ~ .toggle-button .wolverine .claws:before,
-.nav-control:checked ~ .toggle-button .wolverine .claws:after {
+
+.nav-control:checked~.toggle-button .wolverine .claws:before,
+.nav-control:checked~.toggle-button .wolverine .claws:after {
 	background: white;
-    -webkit-transition: top 0.1s ease, -webkit-transform 0.1s 0.2s;
-    transition-delay:  0s, ease;
+	-webkit-transition: top 0.1s ease, -webkit-transform 0.1s 0.2s;
+	transition-delay: 0s, ease;
 	-webkit-transition-delay: 0s, ease;
 	-moz-transition: top 0.1s ease, -moz-transform 0.1s 0.2s ease;
 	-o-transition: top 0.1s ease, -o-transform 0.1s 0.2s ease;
@@ -259,14 +287,17 @@ iframe {
 	top: 0;
 	width: 20px;
 }
-.nav-control:checked ~ .toggle-button .wolverine .claws:before {
+
+.nav-control:checked~.toggle-button .wolverine .claws:before {
 	-webkit-transform: rotate3d(0, 0, 1, 45deg);
 	transform: rotate3d(0, 0, 1, 45deg);
 }
-.nav-control:checked ~ .toggle-button .wolverine .claws:after {
+
+.nav-control:checked~.toggle-button .wolverine .claws:after {
 	-webkit-transform: rotate3d(0, 0, 1, -45deg);
 	transform: rotate3d(0, 0, 1, -45deg);
 }
+
 /* End of UI CSS */
 
 
@@ -287,17 +318,17 @@ img {
 	height: auto;
 	background-repeat: no-repeat;
 	background-size: cover;
-  }
+}
 
 
 
-  /*Responsive NavBar -W3schools*/
+/*Responsive NavBar -W3schools*/
 .topnav {
 	overflow: hidden;
 	background-color: #333;
-  }
-  
-  .topnav a {
+}
+
+.topnav a {
 	float: left;
 	display: block;
 	color: #f2f2f2;
@@ -305,101 +336,110 @@ img {
 	padding: 14px 16px;
 	text-decoration: none;
 	font-size: 17px;
-  }
-  
-  .topnav a:hover {
+}
+
+.topnav a:hover {
 	background-color: #ddd;
 	color: black;
-  }
-  
-  .topnav a.active {
+}
+
+.topnav a.active {
 	background-color: #4CAF50;
 	color: white;
-  }
-  
-  .topnav .icon {
+}
+
+.topnav .icon {
 	display: none;
-  }
-  
-  @media screen and (max-width: 600px) {
-	.topnav a:not(:first-child) {display: none;}
+}
+
+@media screen and (max-width: 600px) {
+	.topnav a:not(:first-child) {
+		display: none;
+	}
+
 	.topnav a.icon {
-	  float: right;
-	  display: block;
+		float: right;
+		display: block;
 	}
-  }
-  
-  @media screen and (max-width: 600px) {
-	.topnav.responsive {position: relative;}
+}
+
+@media screen and (max-width: 600px) {
+	.topnav.responsive {
+		position: relative;
+	}
+
 	.topnav.responsive .icon {
-	  position: absolute;
-	  right: 0;
-	  top: 0;
+		position: absolute;
+		right: 0;
+		top: 0;
 	}
+
 	.topnav.responsive a {
-	  float: none;
-	  display: block;
-	  text-align: left;
+		float: none;
+		display: block;
+		text-align: left;
 	}
-  }
-  
-  /* end*/
+}
 
-  button{
-      padding:5px;
-      margin: 5px;
-  }
+/* end*/
 
-  /*Pretty snackbar */
+button {
+	padding: 5px;
+	margin: 5px;
+}
+
+/*Pretty snackbar */
 #snackbar {
-    visibility: hidden;
-    min-width: 250px;
-    margin-left: -125px;
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    border-radius: 2px;
-    padding: 16px;
-    position: fixed;
-    z-index: 1;
-    left: 50%;
-    top: 30px;
-    font-size: 17px;
-  }
-  
-  #snackbar.show {
-    visibility: visible;
-    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
-    animation: fadein 0.5s, fadeout 0.5s 2.5s;
-  }
+	visibility: hidden;
+	min-width: 250px;
+	margin-left: -125px;
+	background-color: #333;
+	color: #fff;
+	text-align: center;
+	border-radius: 2px;
+	padding: 16px;
+	position: fixed;
+	z-index: 1;
+	left: 50%;
+	top: 30px;
+	font-size: 17px;
+}
 
-  /*Tooltip*/
+#snackbar.show {
+	visibility: visible;
+	-webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+	animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/*Tooltip*/
 .tooltip {
-    position: fixed;
-    margin: 5px;
-    width: auto;
-    height: auto;
-    border: 1px solid black;
-    display: none;
-    background: #3299CC;
-    top: 0;
-    color: white;
-  }
+	position: absolute;
+	margin: 5px;
+	width: auto;
+	height: auto;
+	border: 1px solid black;
+	display: none;
+	background: #3299CC;
+	top: 0;
+	right: 230px;
+	color: white;
+}
 
-  /*Dashed outline for every element - turn on/off*/
+/*Dashed outline for every element - turn on/off*/
 .outline-dashed {
-    outline: 1px dashed gray;
-  }
+	outline: 1px dashed gray;
+}
 
-  .outline {
-    outline: 3px solid #3299CC;
-  }
-  
-  #dragitemslist{
-      margin-left: 10px;
-  }
+.outline {
+	outline: 3px solid #3299CC;
+}
+
+#dragitemslist {
+	margin-left: 10px;
+}
+
 /*Collapsible*/
-  .collapsible {
+.collapsible {
 	background-color: #777;
 	color: white;
 	cursor: pointer;
@@ -410,29 +450,30 @@ img {
 	outline: none;
 	font-size: 15px;
 	list-style: none;
-  }
-  
-  .active, .collapsible:hover {
+}
+
+.active,
+.collapsible:hover {
 	background-color: #555;
-  }
-  
-  .collapsible:after {
+}
+
+.collapsible:after {
 	content: '\002B';
 	color: white;
 	font-weight: bold;
 	float: right;
 	margin-left: 5px;
-  }
-  
-  .active:after {
+}
+
+.active:after {
 	content: "\2212";
-  }
-  
-  .content {
+}
+
+.content {
 	padding: 0 18px;
 	max-height: 0;
 	overflow: hidden;
 	transition: max-height 0.2s ease-out;
 	list-style: none;
-	
-  }
+
+}
