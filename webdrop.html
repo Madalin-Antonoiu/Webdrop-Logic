@@ -35,35 +35,722 @@
     </div>
 
     <div id="left_menu">
-      <ul>
-        <li>
-          <p class="big_ger"><i class="fas fa-th"></i></i><span>Layout</span></p>
-        </li>
-        <li>
-          <p class="big_ger"><i class="fas fa-th-large"></i></i><span>Elements</span></p>
-        </li>
+      <div id="dragitemslist">
+        <h1>Components</h1>
+        <div>
+            <ul id="dragitemslistcontainer">
 
-        <li>
-          <p class="big_ger"><i class="fas fa-cubes"></i></i><span>Components</span></p>
-        </li>
-        <li>
-          <p class="big_ger"><i class="fas fa-cube"></i></i><span>Blocks</span></p>
-        </li>
-        <li>
-          <p class="big_ger"><i class="fas fa-window-restore" aria-hidden="true"></i><span>Templates</span></p>
-        </li>
+                <!--Alerts-->
+                <button class="collapsible">Alerts</button>
+                <div class="content">
 
-      </ul>
+                    <li draggable="true" data-insert-html='
+              <div class="alert alert-primary" role="alert">
+                  A simple primary alert—check it out!
+                </div>
+                <div class="alert alert-secondary" role="alert">
+                  A simple secondary alert—check it out!
+                </div>
+                <div class="alert alert-success" role="alert">
+                  A simple success alert—check it out!
+                </div>
+                <div class="alert alert-danger" role="alert">
+                  A simple danger alert—check it out!
+                </div>
+                <div class="alert alert-warning" role="alert">
+                  A simple warning alert—check it out!
+                </div>
+                <div class="alert alert-info" role="alert">
+                  A simple info alert—check it out!
+                </div>
+                <div class="alert alert-light" role="alert">
+                  A simple light alert—check it out!
+                </div>
+                <div class="alert alert-dark" role="alert">
+                  A simple dark alert—check it out!
+                </div>
+              '>
+                        <p><i class="fa fa-header"></i>Alerts</p>
+                    </li>
+
+                    <!--Alert dissmisible-->
+                    <li draggable="true" data-insert-html='
+              <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                  <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+              '>
+                        <p><i class="fa fa-header"></i>Alert dismissable</p>
+                    </li>
+
+                    <!--Alert with heading-->
+                    <li draggable="true" data-insert-html='
+              <div class="alert alert-success" role="alert">
+                  <h4 class="alert-heading">Well done!</h4>
+                  <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
+                  <hr>
+                  <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+                </div>
+              '>
+                        <p><i class="fa fa-header"></i>Alert with heading</p>
+                    </li>
+
+                    <!--Link colors-->
+                    <li draggable="true" data-insert-html='
+              <div class="alert alert-primary" role="alert">
+                  A simple primary alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+                </div>
+                <div class="alert alert-secondary" role="alert">
+                  A simple secondary alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+                </div>
+                <div class="alert alert-success" role="alert">
+                  A simple success alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+                </div>
+                <div class="alert alert-danger" role="alert">
+                  A simple danger alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+                </div>
+                <div class="alert alert-warning" role="alert">
+                  A simple warning alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+                </div>
+                <div class="alert alert-info" role="alert">
+                  A simple info alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+                </div>
+                <div class="alert alert-light" role="alert">
+                  A simple light alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+                </div>
+                <div class="alert alert-dark" role="alert">
+                  A simple dark alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+                </div>
+              '>
+                        <p><i class="fa fa-header"></i>Link colors</p>
+                    </li>
+
+                </div>
+
+                <!--Badges-->
+                <button class="collapsible">Badges</button>
+                <div class="content">
+
+                    <li draggable="true" data-insert-html='
+              <h1>Example heading <span class="badge badge-secondary">New</span></h1>
+              <h2>Example heading <span class="badge badge-secondary">New</span></h2>
+              <h3>Example heading <span class="badge badge-secondary">New</span></h3>
+              <h4>Example heading <span class="badge badge-secondary">New</span></h4>
+              <h5>Example heading <span class="badge badge-secondary">New</span></h5>
+              <h6>Example heading <span class="badge badge-secondary">New</span></h6>
+              '>
+                        <p><i class="fa fa-header"></i>Badges</p>
+                    </li>
+
+                    <!--Badge - Button Notification -->
+                    <li draggable="true" data-insert-html='
+              <button type="button" class="btn btn-primary">
+              Notifications <span class="badge badge-light">4</span>
+              </button>
+              <button type="button" class="btn btn-primary">
+                  Profile <span class="badge badge-light">9</span>
+                  <span class="sr-only">unread messages</span>
+              </button>     
+              <button type="button" class="btn btn-primary">
+                  Profile <span class="badge badge-secondary">9</span>
+                  <span class="sr-only">unread messages</span>
+              </button>          
+              <button type="button" class="btn btn-primary">
+                  Profile <span class="badge badge-success">9</span>
+                  <span class="sr-only">unread messages</span>
+              </button>          <button type="button" class="btn btn-primary">
+                  Profile <span class="badge badge-danger">9</span>
+                  <span class="sr-only">unread messages</span>
+              </button>
+              '>
+                        <p><i class="fa fa-header"></i>Badge Button Notification</p>
+                    </li>
+
+                    <!--Badges - Contextual variations-->
+                    <li draggable="true" data-insert-html='
+              <span class="badge badge-primary">Primary</span>
+              <span class="badge badge-secondary">Secondary</span>
+              <span class="badge badge-success">Success</span>
+              <span class="badge badge-danger">Danger</span>
+              <span class="badge badge-warning">Warning</span>
+              <span class="badge badge-info">Info</span>
+              <span class="badge badge-light">Light</span>
+              <span class="badge badge-dark">Dark</span>
+              '>
+                        <p><i class="fa fa-header"></i>Badges - Contextual</p>
+                    </li>
+
+                    <!--Badges - Pills -->
+                    <li draggable="true" data-insert-html='
+              <span class="badge badge-pill badge-primary">Primary</span>
+              <span class="badge badge-pill badge-secondary">Secondary</span>
+              <span class="badge badge-pill badge-success">Success</span>
+              <span class="badge badge-pill badge-danger">Danger</span>
+              <span class="badge badge-pill badge-warning">Warning</span>
+              <span class="badge badge-pill badge-info">Info</span>
+              <span class="badge badge-pill badge-light">Light</span>
+              <span class="badge badge-pill badge-dark">Dark</span>
+              '>
+                        <p><i class="fa fa-header"></i>Badges - Pills</p>
+                    </li>
+
+                    <!--Badges - Links -->
+                    <li draggable="true" data-insert-html='
+              <a href="#" class="badge badge-primary">Primary</a>
+              <a href="#" class="badge badge-secondary">Secondary</a>
+              <a href="#" class="badge badge-success">Success</a>
+              <a href="#" class="badge badge-danger">Danger</a>
+              <a href="#" class="badge badge-warning">Warning</a>
+              <a href="#" class="badge badge-info">Info</a>
+              <a href="#" class="badge badge-light">Light</a>
+              <a href="#" class="badge badge-dark">Dark</a>
+              '>
+                        <p><i class="fa fa-header"></i>Badges - Links</p>
+                    </li>
+
+                </div>
+
+                <!--Buttons-->
+                <button class="collapsible">Buttons</button>
+                <div class="content">
+
+                    <li draggable="true" data-insert-html='
+              <button type="button" class="btn btn-primary">Primary</button>
+              <button type="button" class="btn btn-secondary">Secondary</button>
+              <button type="button" class="btn btn-success">Success</button>
+              <button type="button" class="btn btn-danger">Danger</button>
+              <button type="button" class="btn btn-warning">Warning</button>
+              <button type="button" class="btn btn-info">Info</button>
+              <button type="button" class="btn btn-light">Light</button>
+              <button type="button" class="btn btn-dark">Dark</button>
+              <button type="button" class="btn btn-link">Link</button>
+              <button type="button" class="btn btn-lg btn-primary" disabled>Primary button</button>
+              <button type="button" class="btn btn-secondary btn-lg" disabled>Button</button>
+              <button type="button" class="btn btn-primary btn-sm">Small button</button>
+              <button type="button" class="btn btn-secondary btn-sm">Small button</button>
+              <button type="button" class="btn btn-primary btn-lg">Large button</button>
+              <button type="button" class="btn btn-secondary btn-lg">Large button</button>
+              '>
+                        <p><i class="fa fa-header"></i>Buttons</p>
+                    </li>
+
+                    <!--Buttons - Outline-->
+                    <li draggable="true" data-insert-html='
+              <button type="button" class="btn btn-outline-primary">Primary</button>
+              <button type="button" class="btn btn-outline-secondary">Secondary</button>
+              <button type="button" class="btn btn-outline-success">Success</button>
+              <button type="button" class="btn btn-outline-danger">Danger</button>
+              <button type="button" class="btn btn-outline-warning">Warning</button>
+              <button type="button" class="btn btn-outline-info">Info</button>
+              <button type="button" class="btn btn-outline-light">Light</button>
+              <button type="button" class="btn btn-outline-dark">Dark</button>
+              '>
+                        <p><i class="fa fa-header"></i>Buttons - Outline</p>
+                    </li>
+
+                    <!--Button tags-->
+                    <li draggable="true" data-insert-html='
+              <a class="btn btn-primary" href="#" role="button">Link</a>
+              <button class="btn btn-primary" type="submit">Button</button>
+              <input class="btn btn-primary" type="button" value="Input">
+              <input class="btn btn-primary" type="submit" value="Submit">
+              <input class="btn btn-primary" type="reset" value="Reset">
+              '>
+                        <p><i class="fa fa-header"></i>Button tags</p>
+                    </li>
+
+                    <!--Button - Active Radio-->
+                    <li draggable="true" data-insert-html='
+              <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                  <label class="btn btn-secondary active">
+                    <input type="radio" name="options" id="option1" autocomplete="off" checked> Active
+                  </label>
+                  <label class="btn btn-secondary">
+                    <input type="radio" name="options" id="option2" autocomplete="off"> Radio
+                  </label>
+                  <label class="btn btn-secondary">
+                    <input type="radio" name="options" id="option3" autocomplete="off"> Radio
+                  </label>
+                </div>
+              '>
+                        <p><i class="fa fa-header"></i>Buttons - Active Radio</p>
+                    </li>
+
+                </div>
+
+                <!--Cards-->
+                <button class="collapsible">Cards</button>
+                <div class="content">
+
+                    <!-- Backgrounds and colors-->
+                    <li draggable="true" data-insert-html='
+              <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+                  <div class="card-header">Header</div>
+                  <div class="card-body">
+                    <h5 class="card-title">Primary card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the cards content.</p>
+                  </div>
+              </div>
+                <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
+                  <div class="card-header">Header</div>
+                  <div class="card-body">
+                    <h5 class="card-title">Secondary card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the cards content.</p>
+                  </div>
+                </div>
+                <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
+                  <div class="card-header">Header</div>
+                  <div class="card-body">
+                    <h5 class="card-title">Success card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the cards content.</p>
+                  </div>
+                </div>
+                <div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
+                  <div class="card-header">Header</div>
+                  <div class="card-body">
+                    <h5 class="card-title">Danger card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the cards content.</p>
+                  </div>
+                </div>
+                <div class="card text-white bg-warning mb-3" style="max-width: 18rem;">
+                  <div class="card-header">Header</div>
+                  <div class="card-body">
+                    <h5 class="card-title">Warning card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the cards content.</p>
+                  </div>
+                </div>
+                <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
+                  <div class="card-header">Header</div>
+                  <div class="card-body">
+                    <h5 class="card-title">Info card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the cards content.</p>
+                  </div>
+                </div>
+                <div class="card bg-light mb-3" style="max-width: 18rem;">
+                  <div class="card-header">Header</div>
+                  <div class="card-body">
+                    <h5 class="card-title">Light card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the cards content.</p>
+                  </div>
+                </div>
+
+                <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+                  <div class="card-header">Header</div>
+                  <div class="card-body">
+                    <h5 class="card-title">Dark card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the cards content.</p>
+                  </div>
+                </div>
+              '>
+                        <p><i class="fa fa-header"></i>Cards Background and color</p>
+                    </li>
+
+                    <!-- Backgrounds and colors - Corder-->
+                    <li draggable="true" data-insert-html='
+              <div class="card border-primary mb-3" style="max-width: 18rem;">
+                  <div class="card-header">Header</div>
+                  <div class="card-body text-primary">
+                    <h5 class="card-title">Primary card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the cards content.</p>
+                  </div>
+                </div>
+                <div class="card border-secondary mb-3" style="max-width: 18rem;">
+                  <div class="card-header">Header</div>
+                  <div class="card-body text-secondary">
+                    <h5 class="card-title">Secondary card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the cards content.</p>
+                  </div>
+                </div>
+                <div class="card border-success mb-3" style="max-width: 18rem;">
+                  <div class="card-header">Header</div>
+                  <div class="card-body text-success">
+                    <h5 class="card-title">Success card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the cards content.</p>
+                  </div>
+                </div>
+                <div class="card border-danger mb-3" style="max-width: 18rem;">
+                  <div class="card-header">Header</div>
+                  <div class="card-body text-danger">
+                    <h5 class="card-title">Danger card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the cards content.</p>
+                  </div>
+                </div>
+                <div class="card border-warning mb-3" style="max-width: 18rem;">
+                  <div class="card-header">Header</div>
+                  <div class="card-body text-warning">
+                    <h5 class="card-title">Warning card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the cards content.</p>
+                  </div>
+                </div>
+                <div class="card border-info mb-3" style="max-width: 18rem;">
+                  <div class="card-header">Header</div>
+                  <div class="card-body text-info">
+                    <h5 class="card-title">Info card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the cards content.</p>
+                  </div>
+                </div>
+                <div class="card border-light mb-3" style="max-width: 18rem;">
+                  <div class="card-header">Header</div>
+                  <div class="card-body">
+                    <h5 class="card-title">Light card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the cards content.</p>
+                  </div>
+                </div>
+                <div class="card border-dark mb-3" style="max-width: 18rem;">
+                  <div class="card-header">Header</div>
+                  <div class="card-body text-dark">
+                    <h5 class="card-title">Dark card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the cards content.</p>
+                  </div>
+                </div
+              '>
+                        <p><i class="fa fa-header"></i>Background with border</p>
+                    </li>
+
+                    <!-- Card deck - 3 columns-->
+                    <li draggable="true" data-insert-html='
+              <div class="card-deck">
+                  <div class="card">
+                    <img src="https://picsum.photos/id/237/361/180" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </div>
+                    <div class="card-footer">
+                      <small class="text-muted">Last updated 3 mins ago</small>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <img src="https://picsum.photos/id/217/361/180" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                    </div>
+                    <div class="card-footer">
+                      <small class="text-muted">Last updated 3 mins ago</small>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <img src="https://picsum.photos/id/117/361/180" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                    </div>
+                    <div class="card-footer">
+                      <small class="text-muted">Last updated 3 mins ago</small>
+                    </div>
+                  </div>
+                </div>
+              '>
+                        <p><i class="fa fa-header"></i>Card deck - 3 columns</p>
+                    </li>
 
 
-      <ul id="dragitemslistcontainer">
-        <!--Three Columns Col-Sm-->
 
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
+
+
+                </div>
+
+
+                <!--Buttons-->
+                <button class="collapsible">Containers/Rows/Columns</button>
+                <div class="content">
+
+                    <!--Empty Container-->
+                    <li draggable="true" data-insert-html='
+                <div class="container">
+                  Delete me 
+                  </div>
+                '>
+                        <p><i class="fa fa-header"></i>Empty Container</p>
+                    </li>
+
+                    <!--Empty Row-->
+                    <li draggable="true" data-insert-html='
+                <div class="row">
+                  Empty row 
+                </div>
+                '>
+                        <p><i class="fa fa-header"></i>Empty Row</p>
+                    </li>
+
+                    <!--Empty Column-->
+                    <li draggable="true" data-insert-html='
+                <div class="col">
+                    Empty column
+                  </div>
+                '>
+                        <p><i class="fa fa-header"></i>Empty column</p>
+                    </li>
+
+                    <!--1 Row 3 columns-->
+                    <li draggable="true" data-insert-html='
+                <div class="row">
+                    <div class="col">
+                      1 of 3
+                    </div>
+                    <div class="col">
+                      2 of 3
+                    </div>
+                    <div class="col">
+                      3 of 3
+                    </div>
+                  </div>
+                '>
+                        <p><i class="fa fa-header"></i>1 Row 3 Columns</p>
+                    </li>
+
+
+
+
+                </div>
+
+                <li data-insert-html='
+          <h1>HEADER GOES HERE</h1>
+          ' draggable="true">
+                    <p><i class="fa fa-header"></i>Header</p>
+                </li>
+
+                <li draggable="true" data-insert-html='
+          <img src="https://images.unsplash.com/photo-1566410834486-857b30cff4ab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80">
+          '>
+                    <p><i class="fa fa-bar-chart"></i>Chart Image</p>
+                </li>
+
+                <li draggable="true" data-insert-html='
+            <div class="well login-box"> <form action=""> <legend>Login</legend> <div class="form-group"> <label for="username-email">E-mail or Username</label> <input value="" id="username-email" placeholder="E-mail or Username" type="text" class="form-control"/> </div><div class="form-group"> <label for="password">Password</label> <input id="password" value="" placeholder="Password" type="text" class="form-control"/> </div><div class="form-group text-center"> <button class="btn btn-danger btn-cancel-action">Cancel</button> <input type="submit" class="btn btn-success btn-login-submit" value="Login"/> </div></form> </div>
+            '>
+                    <p><i class="fa fa-sign-in"></i>Login Form</p>
+                </li>
+
+                <li draggable="true" data-insert-html='
+            <div class="topnav" id="myTopnav"> <a href="#home" class="active">Home</a> <a href="#news">News</a> <a href="#contact">Contact</a> <a href="#about">About</a> <a href="javascript:void(0);" class="icon" onclick="myFunction()"> + </a> </div>
+            '>
+                    <p><i class="fa fa-bar-chart"></i>Responsive Nav</p>
+                </li>
+
+                <!--Three Columns Col-Sm-->
+                <li draggable="true" data-insert-html='
+          <div class="container">
+              <div class="row">
+                <div class="col-sm">
+                  One of three columns
+                </div>
+                <div class="col-sm">
+                  One of three columns
+                </div>
+                <div class="col-sm">
+                  One of three columns
+                </div>
+              </div>
+            </div>
+          '>
+                    <p><i class="fa fa-header"></i>Container with 1 Row/ 3 Columns</p>
+                </li>
+
+                <!--Breadcrumb-->
+                <li draggable="true" data-insert-html='
+          <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item active" aria-current="page">Home</li>
+              </ol>
+            </nav>
+            
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Library</li>
+              </ol>
+            </nav>
+            
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item"><a href="#">Library</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Data</li>
+              </ol>
+            </nav>
+          '>
+                    <p><i class="fa fa-header"></i>Breadcrumb</p>
+                </li>
+
+
+                <!--Cards-->
+                <li draggable="true" data-insert-html='
+          <div class="card" style="width: 18rem;">
+              <img src="https://picsum.photos/id/237/200/200" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the cards content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          '>
+                    <p><i class="fa fa-header"></i>Card</p>
+                </li>
+                <!--Card grid - 2 columns no img -->
+                <li draggable="true" data-insert-html='
+          <div class="row">
+              <div class="col-sm-6">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">Special title treatment</h5>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">Special title treatment</h5>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          '>
+                    <p><i class="fa fa-header"></i>Card grid - 2 columns</p>
+                </li>
+
+                <!--Card grid - 3 columns no img -->
+                <li draggable="true" data-insert-html='
+          <div class="row">
+              <div class="col-sm-4">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">Special title treatment</h5>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">Special title treatment</h5>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title">Special title treatment</h5>
+                      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          '>
+                    <p><i class="fa fa-header"></i>Card grid - 3 columns no img</p>
+                </li>
+
+                <!--Container-->
+                <li draggable="true" data-insert-html='
+          <div class="container">
+              <div class="row">
+                <div class="col">
+                  1 of 2
+                </div>
+                <div class="col">
+                  2 of 2
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  1 of 3
+                </div>
+                <div class="col">
+                  2 of 3
+                </div>
+                <div class="col">
+                  3 of 3
+                </div>
+              </div>
+            </div>
+          '>
+                    <p><i class="fa fa-header"></i>Container 2/2 si 3/3</p>
+                </li>
+
+                <li draggable="true" data-insert-html='
+          <div class="container">
+            <div class="row">
+              <div class="col">
+                1 of 3
+              </div>
+              <div class="col">
+                2 of 3
+              </div>
+              <div class="col">
+                3 of 3
+              </div>
+            </div>
+          </div>
+          '>
+                    <p><i class="fa fa-header"></i> Container - 1 Row 3 columns</p>
+                </li>
+
+                <li draggable="true" data-insert-html='
+
+          '>
+                    <p><i class="fa fa-header"></i>Empty</p>
+                </li>
+
+                <li draggable="true" data-insert-html='
+
+          '>
+                    <p><i class="fa fa-header"></i>Empty</p>
+                </li>
+
+                <li draggable="true" data-insert-html='
+
+          '>
+                    <p><i class="fa fa-header"></i>Empty</p>
+                </li>
+
+                <li draggable="true" data-insert-html='
+
+          '>
+                    <p><i class="fa fa-header"></i>Empty</p>
+                </li>
+
+                <li draggable="true" data-insert-html='
+
+          '>
+                    <p><i class="fa fa-header"></i>Empty</p>
+                </li>
+
+                <li draggable="true" data-insert-html='
+
+          '>
+                    <p><i class="fa fa-header"></i>Empty</p>
+                </li>
+
+                <li draggable="true" data-insert-html='
+
+          '>
+                    <p><i class="fa fa-header"></i>Empty</p>
+                </li>
+
+                <li draggable="true" data-insert-html='
+
+          '>
+                    <p><i class="fa fa-header"></i>Empty</p>
+                </li>
+
+                <li draggable="true" data-insert-html='
+
+          '>
+            </ul>
+        </div>
+    </div>
+
     </div>
   </aside>
 

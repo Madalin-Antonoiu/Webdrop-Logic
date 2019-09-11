@@ -3,9 +3,8 @@
 var clientFrameWindow = document.getElementById('clientframe').contentWindow.document;
 var droppables = document.getElementById("dragitemslistcontainer");
 
-
-function onLoadiframe() { //if not doing on iFrame load, the addEventListeners will crash sometimes
-
+//If not doing on iFrame load, the addEventListeners will crash sometimes
+function onLoadiframe() { 
   //Listeners
   clientFrameWindow.body.addEventListener('mouseover', mouseEnter, false);
   clientFrameWindow.body.addEventListener('mouseout', mouseLeave, false);
@@ -35,7 +34,6 @@ function onLoadiframe() { //if not doing on iFrame load, the addEventListeners w
     document.getElementById('tooltip1').style.display = "block";
     //console.log('<' + e.target.tagName.toLowerCase() + '>');
   }
-
   function mouseLeave(e) {
     //Remove outline on hover
     e.target.classList.remove('outline');
@@ -43,7 +41,6 @@ function onLoadiframe() { //if not doing on iFrame load, the addEventListeners w
     document.getElementById('tooltip1').style.display = "";
     //console.clear();
   }
-
   function dragOver(e) {
     //These two are really needed to remove the cut circle on iframe :)
     event.preventDefault();
@@ -69,14 +66,12 @@ function onLoadiframe() { //if not doing on iFrame load, the addEventListeners w
     document.getElementById('tooltip1').style.display = "block";
     //console.log('<' + e.target.tagName.toLowerCase() + '>');
   }
-
   function dragLeave(e) {
     //Add outline on hover
     e.target.classList.remove('outline');
     document.getElementById('tooltip1').style.display = "none";
     //console.log('<' + e.target.tagName.toLowerCase() + '>');
   }
-
   function onDragStart(e) {
 
     console.log("Drag Started!");
@@ -90,7 +85,6 @@ function onLoadiframe() { //if not doing on iFrame load, the addEventListeners w
     //console.log(e.target.getAttribute('data-insert-html'));
 
   }
-
   function onDrop(e) {
     e.preventDefault();
 
@@ -107,7 +101,6 @@ function onLoadiframe() { //if not doing on iFrame load, the addEventListeners w
   }
 
 }
-
 
 //Control Panel
 function toggleEditIframe() {
@@ -138,7 +131,6 @@ function toggleEditIframe() {
   }
 
 }
-
 function toggleOutlineAll() {
   //Toggle iFrame outline dashed elements
   var x = clientFrameWindow.body.querySelectorAll('*');
@@ -170,7 +162,6 @@ function toggleOutlineAll() {
   }
 
 }
-
 function showClickedElIdClass(e) {
   // If click target's id is not empty 
   if (e.target.id != "") {
@@ -193,6 +184,7 @@ if (typeof console._commandLineAPI !== 'undefined') {
 } else if (typeof console.clear !== 'undefined') {
   console.API = console;
 }
+
 // Extracts high level details of current story
 function gibMiData() {
 
@@ -226,7 +218,6 @@ console.save = function (data, filename) {
   e.initMouseEvent('click', true, false, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null)
   a.dispatchEvent(e)
 }
-
 
 /*Full iFrame code to console- works
 
